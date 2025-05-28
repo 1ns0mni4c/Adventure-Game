@@ -39,3 +39,10 @@ hideout.link_cave(dungeon, "north")
 hideout.link_cave(subway, "east")
 
 armoury.link_cave(dungeon, "east")
+
+current_cave = cavern          
+
+while True:
+    current_cave.get_details()         
+    command = input("> ")    
+    current_cave = current_cave.move(command)
