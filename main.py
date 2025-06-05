@@ -51,7 +51,7 @@ mine.character = harry
 while True:
     current_cave.get_details()
 
-    inhabitant = current_cave.get_character()
+    inhabitant = current_cave.character
     if inhabitant:
         inhabitant.describe()
  
