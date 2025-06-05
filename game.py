@@ -3,6 +3,7 @@ class Place:
         self.name = name
         self.description = description
         self.linked_caves = {}
+        self.character = None
     
     def link_cave(self, cave_to_link, direction):
         self.linked_caves[direction] = cave_to_link

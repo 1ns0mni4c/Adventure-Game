@@ -46,8 +46,14 @@ harry.conversation = "Hangry…Hanggrry"
 harry.weakness = "vegemite"
 
 current_cave = cavern
+mine.character = harry
 
 while True:
-    current_cave.get_details()         
+    current_cave.get_details()
+
+    inhabitant = current_cave.get_character()
+    if inhabitant:
+        inhabitant.describe()
+ 
     command = input("> ")    
     current_cave = current_cave.move(command)
