@@ -1,4 +1,5 @@
 from game import Place
+from character import Enemy
 
 cavern = Place("Cavern", "A large, empty cave.")
 
@@ -40,7 +41,11 @@ hideout.link_cave(subway, "east")
 
 armoury.link_cave(dungeon, "east")
 
-current_cave = cavern          
+harry = Enemy("Harry", "A smelly Wumpus")
+harry.conversation = "Hangry…Hanggrry"
+harry.weakness = "vegemite"
+
+current_cave = cavern
 
 while True:
     current_cave.get_details()         
