@@ -50,10 +50,25 @@ mine.character = harry
 
 while True:
     current_cave.get_details()
-
     inhabitant = current_cave.character
     if inhabitant:
         inhabitant.describe()
  
-    command = input("> ")    
-    current_cave = current_cave.move(command)
+    command = input("> ")
+
+    if command in ["north", "east", "south", "west"]:
+        current_cave = current_cave.move(command)
+    elif command == "talk":
+        if inhabitant:
+            inhabitant.talk()
+    elif command == "fight":
+        if inhabitant and isinstance(inhabitant, Enemy):
+            weapon = input("What will you fight with?\n")
+            
+            if inhabitant.fight(weapon):
+                print("Bravo, hero you won the fight!")
+                current_cave.character = None
+            else:
+                print("Scurry home, you lost the fight.")
+        else:
+            print("There is no one here to fight with.")
