@@ -39,8 +39,9 @@ harry.weakness = "vegemite"
 
 current_cave = cavern
 mine.character = harry
+dead = False
 
-while True:
+while not dead:
     current_cave.get_details()
     inhabitant = current_cave.character
     if inhabitant:
@@ -62,5 +63,6 @@ while True:
                 current_cave.character = None
             else:
                 print("Scurry home, you lost the fight.")
+                dead = True
         else:
             print("There is no one here to fight with.")
