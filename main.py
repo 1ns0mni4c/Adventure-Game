@@ -2,21 +2,13 @@ from game import Place
 from character import Enemy
 
 cavern = Place("Cavern", "A large, empty cave.")
-
 mine = Place("Mine", "An old, abandoned mine.")
-
 grotto = Place("Grotto", "A small cave filled with water.")
-
 subway = Place("Subway", "A pitch-black, abandoned subway.")
-
 dungeon = Place("Dungeon", "An eerie complex of prison cells.")
-
 factory = Place("Factory", "A decrepit factory filled with toxic waste.")
-
 armoury = Place("Armoury", "A dingy cell repurposed as a weapons storage facility.")
-
 tunnel = Place("Tunnel", "An narrow tunnel that stretches for a long distance.")
-
 hideout = Place("Hideout", "A secret room full of amenities and resources.")
 
 cavern.link_cave(mine, "north")
